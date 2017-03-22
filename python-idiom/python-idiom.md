@@ -2,7 +2,7 @@ title: python idiom
 speaker: silence
 url: https://github.com/ksky521/nodePPT
 transition: vertical3d
-files: /js/demo.js,/css/demo.css
+
 
 [slide style="background-color:#2C3F51"]
 
@@ -18,7 +18,6 @@ files: /js/demo.js,/css/demo.css
 - 编写函数的几个原则
 - 列表推导式
 - 善用装饰器
-- 分清 == 与 is 的适用场景
 - 数据交换值的时候不推荐使用中间变量
 - 连接字符串应优先使用 join 而不是 +
 - 元素是否存在字典中
@@ -35,8 +34,6 @@ files: /js/demo.js,/css/demo.css
 ```python
 datadict = {'name': 'tommao', 'age': 25}
 'name' in datadict.keys()
-
-datadict.has_key('name')
 ```
 
 ## Good
@@ -46,6 +43,36 @@ datadict = {'name': 'tommao', 'age': 25}
 'name' in datadict
 ```
 
+## 比对
+![](/_image/2017-03-22-20-46-22.jpg)
+
+
+[slide style="background-color:#2C3F51"]
+
+# Python函数参数默认值的陷阱 {:&.flexbox.vleft}
+
+## Bad
+
+```
+def func(lst=[]):
+    lst.append(1)
+    print(lst)
+```
+
+## Good
+```
+def func(lst=None):
+    if lst is None:
+        lst = []
+    lst.append(1)
+    print(lst)
+```
+
+
+![](/_image/2017-03-22-21-02-50.jpg)
+
+
+[Python函数参数默认值的陷阱和原理深究](http://cenalulu.github.io/python/default-mutable-arguments/)
 
 [slide style="background-color:#2C3F51"]
 
@@ -58,9 +85,38 @@ strs = ''.join(strlist)
 
 
 [slide style="background-color:#2C3F51"]
+# 使用级联比较 a < b < c {:&.flexbox.vleft}
+
+## Bad
+
+```python
+a, b, c = 1, 2, 3
+if a < b and b < c:
+    pass
+```
+
+## Good
+
+```python
+a, b, c = 1, 2, 3
+if a < b < c:
+    pass
+```
+
+
+[slide style="background-color:#2C3F51"]
+
+# 用**而不是pow {:&.flexbox.vleft}
+
+
+![](/_image/2017-03-22-21-16-44.jpg)
+
+
+
+
+[slide style="background-color:#2C3F51"]
 
 # 检查变量是否等于常量 {:&.flexbox.vleft}
-
 
 ## Bad
 
@@ -91,7 +147,7 @@ if attr is None:
 
 [slide style="background-color:#2C3F51"]
 
-# 数据交换值的时候不推荐使用中间变量 {:&.flexbox.vleft}
+# 不借助中间变量交换两个变量的值 {:&.flexbox.vleft}
 
 ## Bad
 
