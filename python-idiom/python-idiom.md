@@ -148,7 +148,6 @@ if a < b < c:
 
 
 
-
 [slide style="background-color:#2C3F51"]
 
 # 检查变量是否等于常量 {:&.flexbox.vleft}
@@ -299,13 +298,16 @@ def increase_page_view(func):
             cache.incr(obj.id)
         return obj
 
+    return wrapper
+
+
 @increase_page_view
 def get_article_detail(uid):
     return ORM.get_article(uid)
 ```
 
 > 这样原来的获取文章详情的函数，只关心获取文章，
-> 而累加浏览量的操作放到具体的装饰器函数中，提高代码的可读性`
+> 而累加浏览量的操作放到具体的装饰器函数中，提高代码的可读性
 
 [slide style="background-color:#2C3F51"]
 
