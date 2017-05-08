@@ -22,32 +22,49 @@ files: /js/demo.js,/css/demo.css
 
 > WSGI不是服务器，不是API，不是Python模块，更不是什么框架，而是一种服务器和客户端交互的接口规范！
 
+[slide]
+
+# CGI {:&.flexbox.vleft}
+
+> CGI是外部应用程序（CGI程序）与WEB服务器之间的接口标准
+
+## 处理流程
+
+- 通过Internet把用户请求送到web服务器。
+- web服务器接收用户请求并交给CGI程序处理。
+- CGI程序把处理结果传送给web服务器。
+- web服务器把结果送回到用户。
 
 [slide]
 
+# CGI {:&.flexbox.vleft}
+
+## 优点
+
+- 动态网页, 加载数据、数据运算等
+
+## 缺点
+
+- 每次请求都要重新 启动进程、处理请求、结束进程，服务器性能
+
+[slide]
+
+# FastCGI {:&.flexbox.vleft}
+
+- 减少了 Server 与 CGI 应用之间的交互开销
+
+初始化时启动一个 FastCGI Server 常驻内存，处理请求
+
+[slide]
 
 ![](/image/wsgi2.jpg)
 
-[slide]
+## 回到 wsgi
 
-# server app 分别有哪些  {:&.flexbox.vleft}
-
-## server/gateway
-- gunicorn
-- uWSGI
-- mod_wsgi
-
-## app/framework
-
-- flask
-- django
-- Tornado
-- Pyramid
-- web.py
-- ...
-
+> WSGI 是 Web 服务器和 Web 应用程序之间的一种简单而通用的接口，最初是为 Python 量身定做。
 
 [slide]
+
 
 ![](/image/wsgi.png)
 
@@ -67,3 +84,19 @@ def application(environ, start_response):
 
 ![](/image/wsgi-flow.png)
 
+
+# server app 分别有哪些  {:&.flexbox.vleft}
+
+## server/gateway
+- gunicorn
+- uWSGI
+- mod_wsgi
+
+## app/framework
+
+- flask
+- django
+- Tornado
+- Pyramid
+- web.py
+- ...
