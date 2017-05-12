@@ -35,6 +35,7 @@ files: /js/demo.js,/css/demo.css
 - CGI程序把处理结果传送给web服务器。
 - web服务器把结果送回到用户。
 
+
 [slide]
 
 # CGI {:&.flexbox.vleft}
@@ -100,3 +101,42 @@ def application(environ, start_response):
 - Pyramid
 - web.py
 - ...
+
+[slide]
+
+# gunicorn 示例  {:&.flexbox.vleft}
+
+## 安装
+
+```python
+pip install gunicorn
+```
+
+```python
+# app.py
+def application(environ, start_response):
+    data = b'Hello WSGI!\n'
+    headers = [
+        ('Content-Type', 'text/plain'),
+        ('Content-Length', str(len(data)))
+    ]
+    start_response("200 OK", headers)
+
+    return iter([data])
+```
+
+```bash
+gunicorn -w 4 app:application
+```
+
+[slide]
+
+
+## 相关链接
+https://www.biaodianfu.com/cgi-fastcgi-wsgi.html
+
+[slide]
+
+# 谢谢
+
+Github：https://github.com/istommao/lecturenotes
