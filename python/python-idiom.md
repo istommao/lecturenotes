@@ -79,7 +79,7 @@ datadict = {'name': 'tommao', 'age': 25}
 ```
 
 ## 比对
-![](/_image/2017-03-22-20-46-22.jpg)
+![](/image/2017-03-22-20-46-22.jpg)
 
 
 [slide style="background-color:#2C3F51"]
@@ -104,7 +104,7 @@ def func(lst=None):
 ```
 
 
-![](/_image/2017-03-22-21-02-50.jpg)
+![](/image/2017-03-22-21-02-50.jpg)
 
 
 [Python函数参数默认值的陷阱和原理深究](http://cenalulu.github.io/python/default-mutable-arguments/)
@@ -144,7 +144,7 @@ if a < b < c:
 # 用**而不是pow {:&.flexbox.vleft}
 
 
-![](/_image/2017-03-22-21-16-44.jpg)
+![](/image/2017-03-22-21-16-44.jpg)
 
 
 
