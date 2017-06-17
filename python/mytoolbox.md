@@ -9,6 +9,30 @@ transition: cards
 # My ToolBox
 ## Author：silence
 
+[slide style="background-color:#2C3F51"]
+
+# iTerm2 + Zsh + Oh My Zsh + tmux
+
+- http://wulfric.me/2015/08/iterm2/
+- http://www.dreamxu.com/mac-terminal/
+
+[slide style="background-color:#2C3F51"]
+
+# Alfred
+
+> Alfred 可以说是Mac下的效率利器之一Alfred 几乎是一切程序的入口，打开程序、查找文件、简单搜索等等
+
+https://www.alfredapp.com/
+
+
+[slide style="background-color:#2C3F51"]
+
+# 1Password
+
+> 1Password - 最佳跨电脑手机平台的账号密码管理工具软件 (高安全性/一键自动登录网站)
+
+https://1password.com/
+
 
 [slide style="background-color:#2C3F51"]
 
