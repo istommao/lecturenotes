@@ -33,6 +33,13 @@ https://www.alfredapp.com/
 
 https://1password.com/
 
+[slide style="background-color:#2C3F51"]
+
+# git-flow
+
+> git-flow 是一个 git 扩展集，按 Vincent Driessen 的分支模型提供高层次的库操作。
+
+https://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html
 
 [slide style="background-color:#2C3F51"]
 
@@ -47,3 +54,9 @@ https://1password.com/
 
 
 [slide style="background-color:#2C3F51"]
+
+# autojump
+
+> 自动补完不算什么，一键直达目录才是终极神器！
+
+https://github.com/wting/autojump
