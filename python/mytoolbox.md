@@ -45,7 +45,7 @@ https://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html
 
 # git-up
 
-> git-up(1) -- fetch and rebase all locally-tracked remote branches
+> git-up -- fetch and rebase all locally-tracked remote branches
 
 - github: https://github.com/aanand/git-up
 
